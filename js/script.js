@@ -95,5 +95,59 @@ const questions = [
             { text: '2', correct: true }
         ]
     },
+    {
+        question: 'What is Madonnas real name?',
+        answers: [
+            { text: '4', correct: true },
+            { text: '22', correct: false },
+            { text: '202', correct: false },
+            { text: '2002', correct: false }
+        ]
+    },
+    {
+        question: 'What is your favorite Prince album?',
+        answers: [
+            { text: '4', correct: true },
+            { text: '22', correct: false },
+            { text: '202', correct: false },
+            { text: '2002', correct: false }
+        ]
+    },
+    {
+        question: 'Who did your hair?',
+        answers: [
+            { text: '4', correct: true },
+            { text: '22', correct: false },
+            { text: '202', correct: false },
+            { text: '2002', correct: false }
+        ]
+    },
+    {
+        question: 'Do you want to party?',
+        answers: [
+            { text: '4', correct: true },
+            { text: '22', correct: false },
+            { text: '202', correct: false },
+            { text: '2002', correct: false }
+        ]
+    },
+    {
+        question: 'Thank you?',
+        answers: [
+            { text: 'Youre welcome', correct: true },
+            { text: 'No', correct: false },
+            { text: '202', correct: false },
+            { text: '2002', correct: false }
+        ]
+    },
+    {
+        question: 'How much is that doggie in the window?',
+        answers: [
+            { text: '4', correct: true },
+            { text: '22', correct: false },
+            { text: '202', correct: false },
+            { text: '2002', correct: false }
+        ]
+    },
     
 ]
