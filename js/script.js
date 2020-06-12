@@ -98,37 +98,37 @@ const questions = [
     {
         question: 'What is Madonnas real name?',
         answers: [
-            { text: '4', correct: true },
-            { text: '22', correct: false },
-            { text: '202', correct: false },
-            { text: '2002', correct: false }
+            { text: 'Madonna', correct: true },
+            { text: 'Sharon', correct: false },
+            { text: 'Baby Girl', correct: false },
+            { text: 'Mariah', correct: false }
         ]
     },
     {
         question: 'What is your favorite Prince album?',
         answers: [
-            { text: '4', correct: true },
-            { text: '22', correct: false },
-            { text: '202', correct: false },
-            { text: '2002', correct: false }
+            { text: '1999', correct: true },
+            { text: 'Controversy', correct: false },
+            { text: 'Purple Rain', correct: false },
+            { text: 'Graffiti Bridge', correct: false }
         ]
     },
     {
         question: 'Who did your hair?',
         answers: [
-            { text: '4', correct: true },
-            { text: '22', correct: false },
-            { text: '202', correct: false },
-            { text: '2002', correct: false }
+            { text: 'Me', correct: true },
+            { text: 'You', correct: false },
+            { text: 'What', correct: false },
+            { text: 'OK', correct: false }
         ]
     },
     {
         question: 'Do you want to party?',
         answers: [
-            { text: '4', correct: true },
-            { text: '22', correct: false },
-            { text: '202', correct: false },
-            { text: '2002', correct: false }
+            { text: 'Yes', correct: true },
+            { text: 'Maybe', correct: false },
+            { text: 'Not tonight', correct: false },
+            { text: 'Never', correct: false }
         ]
     },
     {
