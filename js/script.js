@@ -102,7 +102,8 @@ nextButton.addEventListener('click', () => {
 
 function startGame() {
     setInterval(function() {
-        
+        console.log("Hi!");
+    }, 1000)   
     }
     // use anonymous function, setInterval and nowhere else
     startButton.classList.add('hide');
