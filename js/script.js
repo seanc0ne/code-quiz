@@ -1,90 +1,85 @@
 const questions = [
     {
-        question: 'What is the purpose of the alt attribute for images?',
+        question: 'Inside which HTML element do we put the JavaScript?',
         answers: [
-            { text: 'To provide context for the image', correct: true },
-            { text: 'To prevent search engines from indexing the image', correct: false },
-            { text: 'To make it easier to style the image with CSS', correct: false },
-            { text: 'To make the image load faster', correct: false }
+            { text: '<script>', correct: true },
+            { text: '<js>', correct: false },
+            { text: '<scripting>', correct: false },
+            { text: '<javascript>', correct: false }
         ]
     },
     {
-        question: 'How can you add more than one class to an HTML element?',
+        question: 'Where is the correct place to insert a JavaScript?',
         answers: [
-            { text: 'Add a second class attribute', correct: false },
-            { text: 'Add a comma between the class names', correct: false },
-            { text: 'Add a class-2 attribute', correct: false },
-            { text: 'Add a space between the class names', correct: true }
+            { text: 'The <body> section', correct: false },
+            { text: 'The <head> section', correct: false },
+            { text: 'Both the <head> section and the <body> section are correct', correct: true }
         ]
     },
     {
-        question: 'What CSS declaration could you add to a 50%-width <div> to center it?',
+        question: 'What is the correct syntax for referring to an external script called "xxx.js"?',
         answers: [
-            { text: 'margin: 0 auto', correct: true },
-            { text: 'text-align: center', correct: false },
-            { text: 'float: center', correct: false },
-            { text: 'align: center', correct: false }
+            { text: '<script src="xxx.js">', correct: true },
+            { text: '<script href="xxx.js">', correct: false },
+            { text: '<script name="xxx.js">', correct: false }
         ]
     },
     {
-        question: 'Which CSS property allows the parent element to display its CSS properties by stretching its dimensions to physically contain its child elements?',
+        question: 'The external JavaScript file must contain the <script> tag.',
         answers: [
-            { text: 'text-align: center;', correct: false },
-            { text: 'margin: auto;', correct: false },
-            { text: 'overflow: auto;', correct: true },
-            { text: 'display: inline-block;', correct: false }
+            { text: 'True', correct: false },
+            { text: 'False', correct: true }
         ]
     },
     {
-        question: 'How do you create a flexbox?',
+        question: 'How do you write "Hello World" in an alert box?',
         answers: [
-            { text: 'display: flex;', correct: true },
-            { text: 'display: flexbox;', correct: false },
-            { text: 'display: box;', correct: false },
-            { text: 'flex: display box', correct: false }
+            { text: 'alert("Hello World");', correct: true },
+            { text: 'msg("Hello World");', correct: false },
+            { text: 'alertBox("Hello World");', correct: false },
+            { text: 'msgBox("Hello World");', correct: false }
         ]
     },
     {
-        question: 'By default, in which direction does a flexbox lay out its items?',
+        question: 'How do you create a function in JavaScript?',
         answers: [
-            { text: 'A row (horizontal), with all of the child elements laid out side by side.', correct: true },
-            { text: 'A column (vertical), with all of the child elements laid out on top of one another.', correct: false },
+            { text: 'function myFunction()', correct: true },
+            { text: 'function = myFunction()', correct: false },
+            { text: 'function:myFunction()', correct: false }
         ]
     },
     {
-        question: 'Which of the following is NOT a method for spanning multiple columns?',
+        question: 'How do you call a function named "myFunction"?',
         answers: [
-            { text: 'grid-column: repeat(2, 1fr);', correct: true },
-            { text: 'grid-column: 3 / span 2;', correct: false },
-            { text: 'grid-column: 3 / 4;', correct: false },
-            { text: 'grid-column: -2 / -1;', correct: false }
+            { text: 'call myFunction()', correct: false },
+            { text: 'call function myFunction()', correct: false },
+            { text: 'myFunction()', correct: true }
         ]
     },
     {
-        question: 'What does the selector div:hover a apply to?',
+        question: 'How can you add a comment in a JavaScript?',
         answers: [
-            { text: 'Any <a> element inside a <div> that’s in a hover state.', correct: true },
-            { text: 'Any <div> element whose child <a> element is in a hover state.', correct: false },
-            { text: 'Any <div> or <a> element that’s in a hover state.', correct: false },
-            { text: 'Any <a> element sitting next to a <div> that’s in a hover state.', correct: false }
+            { text: '<!--This is a comment-->', correct: false },
+            { text: '//This is a comment', correct: true },
+            { text: 'This is a comment', correct: false }
         ]
     },
     {
-        question: 'What do the values in transition: color 1s mean?',
+        question: 'What is the correct way to write a JavaScript array?',
         answers: [
-            { text: 'Apply the transition to the color property, but only run once.', correct: false },
-            { text: 'Apply the transition to the color and 1s properties.', correct: false },
-            { text: 'Transition the color from its original value to plus one on the RGB scale.', correct: false },
-            { text: 'Apply the transition to the color property that lasts one second.', correct: true }
+            { text: 'var colors = 1 = ("red"), 2 = ("green"), 3 = ("blue")', correct: false },
+            { text: 'var colors = "red", "green", "blue"', correct: false },
+            { text: 'var colors = (1:"red", 2:"green", 3:"blue")', correct: false },
+            { text: 'var colors = ["red", "green", "blue"]', correct: true }
         ]
     },
     {
-        question: 'What is the purpose of overflow: hidden?',
+        question: 'How do you round the number 7.25, to the nearest integer?',
         answers: [
-            { text: 'Hide all content inside of the element.', correct: false },
-            { text: 'Hide any neighboring content.', correct: false },
-            { text: 'Hide content that flows outside of the element.', correct: true },
-            { text: 'Fix issues caused by CSS floats.', correct: false }
+            { text: 'round(7.25)', correct: false },
+            { text: 'rnd(7.25)', correct: false },
+            { text: 'Math.round(7.25)', correct: true },
+            { text: 'Math.rnd(7.25)', correct: false }
         ]
     },
 ]
@@ -151,7 +146,7 @@ function selectAnswer(e) {
     console.log(correct);
     setStatusClass(document.body, correct);
     Array.from(answerButtonsElement.children).forEach(button => {
-        setStatusClass(button, button.dataset.correct)
+        setStatusClass(button, button.dataset.correct);
     })
     currentQuestionIndex++;
     if (shuffledQuestions.length > currentQuestionIndex) {
@@ -167,9 +162,9 @@ function selectAnswer(e) {
 function setStatusClass(element, correct) {
     clearStatusClass(element);
     if (correct) {
-        element.classList.add('correct')
+        element.classList.add('correct');
     } else {
-        element.classList.add('wrong')
+        element.classList.add('wrong');
     }
 }
 
