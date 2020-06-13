@@ -91,7 +91,7 @@ const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 
 let shuffledQuestions, currentQuestionIndex;
-let startTimer = 120;
+let secondsRemaining = 120;
 
 startButton.addEventListener('click', startGame);
 // startGame is a named function, anonymous function does not have name
@@ -102,12 +102,16 @@ nextButton.addEventListener('click', () => {
 
 function startGame() {
     setInterval(function() {
-        console.log("Hi!");
-    }, 1000)   
-    }
+        var remainingTime = secondsRemaining-1;
+        // secondsRemaining stuck at 120, needs to decrease by one sec in real time
+        var timerTextElement = document.getElementById('timer-text');
+        // link remainingTime to HTML, insert into element
+        timerTextElement.innerText = remainingTime;
+        secondsRemaining = remainingTime;
+    }, 1000);
     // use anonymous function, setInterval and nowhere else
     startButton.classList.add('hide');
-    shuffledQuestions = questions.sort(() => Math.random() - .5);
+    shuffledQuestions = questions.sort(function() {Math.random() - .5});
     currentQuestionIndex = 0;
     questionContainerElement.classList.remove('hide');
     setNextQuestion();
