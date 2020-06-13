@@ -84,32 +84,30 @@ const questions = [
     },
 ]
 
-const startButton = document.getElementById('start-btn')
-const nextButton = document.getElementById('next-btn')
-const questionContainerElement = document.getElementById('question-container')
-const questionElement = document.getElementById('question')
-const answerButtonsElement = document.getElementById('answer-buttons')
+const startButton = document.getElementById('start-btn');
+// const nextButton = document.getElementById('next-btn');
+const questionContainerElement = document.getElementById('question-container');
+const questionElement = document.getElementById('question');
+const answerButtonsElement = document.getElementById('answer-buttons');
+const timerTextElement = document.getElementById('timer-text');
 
 let shuffledQuestions, currentQuestionIndex;
 let secondsRemaining = 120;
 
 startButton.addEventListener('click', startGame);
 // startGame is a named function, anonymous function does not have name
-nextButton.addEventListener('click', () => {
-    currentQuestionIndex++;
-    setNextQuestion();
-})
+// nextButton.addEventListener('click', () => {
+//     currentQuestionIndex++;
+//     setNextQuestion();
+// })
 
 function startGame() {
-    setInterval(function() {
-        var remainingTime = secondsRemaining-1;
-        // secondsRemaining stuck at 120, needs to decrease by one sec in real time
-        var timerTextElement = document.getElementById('timer-text');
-        // link remainingTime to HTML, insert into element
-        timerTextElement.innerText = remainingTime;
-        secondsRemaining = remainingTime;
+    var interval1 = setInterval(function() {
+        if (secondsRemaining === 1) {
+            clearInterval(interval1);
+        }
+        timerTextElement.innerText = --secondsRemaining;
     }, 1000);
-    // use anonymous function, setInterval and nowhere else
     startButton.classList.add('hide');
     shuffledQuestions = questions.sort(function() {Math.random() - .5});
     currentQuestionIndex = 0;
@@ -138,7 +136,7 @@ function showQuestion(question) {
 
 function resetState() {
     clearStatusClass(document.body);
-    nextButton.classList.add('hide');
+//    nextButton.classList.add('hide');
     while (answerButtonsElement.firstChild) {
         answerButtonsElement.removeChild(answerButtonsElement.firstChild);
     }
@@ -155,7 +153,7 @@ function selectAnswer(e) {
     })
     currentQuestionIndex++;
     if (shuffledQuestions.length > currentQuestionIndex) {
-        nextButton.classList.remove('hide');
+ //       nextButton.classList.remove('hide');
     } else {
         startButton.innerText = 'Restart';
         startButton.classList.remove('hide');
@@ -170,6 +168,7 @@ function setStatusClass(element, correct) {
         element.classList.add('correct');
     } else {
         element.classList.add('wrong');
+       // secondsRemaining = secondsRemaining - 20;
     }
 }
 
