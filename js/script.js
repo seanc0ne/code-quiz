@@ -113,6 +113,7 @@ function startGame() {
     currentQuestionIndex = 0;
     questionContainerElement.classList.remove('hide');
     setNextQuestion();
+    // saveScore();
 }
 
 function setNextQuestion() {
@@ -131,6 +132,7 @@ function showQuestion(question) {
         }
         button.addEventListener('click', selectAnswer);
         answerButtonsElement.appendChild(button);
+        // saveScore();
     })
 }
 
@@ -168,7 +170,7 @@ function setStatusClass(element, correct) {
         element.classList.add('correct');
     } else {
         element.classList.add('wrong');
-       // secondsRemaining = secondsRemaining - 20;
+        // secondsRemaining = secondsRemaining - 2;
     }
 }
 
@@ -177,3 +179,12 @@ function clearStatusClass(element) {
     element.classList.remove('wrong');
 }
 
+// var saveScore = function() {
+//     localStorage.setItem("score", JSON.stringify(score));
+// }
+
+// var loadScore = function() {
+//     score = JSON.parse(score);
+// }
+
+// scoreInfoEl.innerHTML = "<h3 class='score'>" + score[i].name + "</h3><span class='score'>" + score[i].type + "</span>";
